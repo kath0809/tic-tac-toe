@@ -16,7 +16,7 @@ interface SquareProps {
 
 function Square({ value, onSquareClick }: SquareProps) {
   return (
-    <button className="square" onClick={onSquareClick}>
+    <button className={`square ${value?.toLowerCase()}`} onClick={onSquareClick}>
       {value}
     </button>
   );
@@ -83,9 +83,9 @@ export default function Tictac() {
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
 
-  function jumpTo(move: number) {
+  /*function jumpTo(move: number) {
     setCurrentMove(move);
-  }
+  }*/
 
   function handlePlay(nextSquares: SquareValue[]) {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
@@ -93,7 +93,7 @@ export default function Tictac() {
     setCurrentMove(nextHistory.length - 1);
   }
 
-  const moves = history.map((_, move) => {
+/*  const moves = history.map((_, move) => {
     let description;
     if (move === 0) {
       description = applicationTexts.goToStart;
@@ -105,10 +105,10 @@ export default function Tictac() {
         <button onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
-  });
+  });*/
   return (
     <ApplicationTextContext.Provider value={applicationTexts}>
-      <div>{userLanguage}</div>
+      <div className="userLanguage">{userLanguage}</div>
       <div className={"game"}>
         <div id="game-board">
           <Board
@@ -117,9 +117,9 @@ export default function Tictac() {
             onPlay={handlePlay}
           />
         </div>
-        <div id="game-info">
+ {/*       <div id="game-info">
           <ol>{moves}</ol>
-        </div>
+        </div>*/}
       </div>
     </ApplicationTextContext.Provider>
   );
