@@ -12,6 +12,7 @@
     "react-dom": "^18.2.0"
   },
   "scripts": {
+    "check": "prettier --write . && tsc --noEmit",
     "dev": "vite",
     "build": "npm run check && vite build",
     "test": "prettier --check . && tsc --noEmit",
