@@ -1,8 +1,8 @@
 export interface ApplicationTexts {
-    goToStart: string;
-    goToMove(move: number): string;
+  goToStart: string;
+  goToMove(move: number): string;
 
-    winner(winner: "X" | "O"): string;
+  winner(winner: "X" | "O"): string;
 
-    nextPlayer(string: "X" | "O"): string;
+  nextPlayer(string: "X" | "O"): string;
 }
