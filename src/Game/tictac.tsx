@@ -16,7 +16,10 @@ interface SquareProps {
 
 function Square({ value, onSquareClick }: SquareProps) {
   return (
-    <button className={`square ${value?.toLowerCase()}`} onClick={onSquareClick}>
+    <button
+      className={`square ${value?.toLowerCase()}`}
+      onClick={onSquareClick}
+    >
       {value}
     </button>
   );
@@ -93,7 +96,7 @@ export default function Tictac() {
     setCurrentMove(nextHistory.length - 1);
   }
 
-/*  const moves = history.map((_, move) => {
+  /*  const moves = history.map((_, move) => {
     let description;
     if (move === 0) {
       description = applicationTexts.goToStart;
@@ -117,7 +120,7 @@ export default function Tictac() {
             onPlay={handlePlay}
           />
         </div>
- {/*       <div id="game-info">
+        {/*       <div id="game-info">
           <ol>{moves}</ol>
         </div>*/}
       </div>
