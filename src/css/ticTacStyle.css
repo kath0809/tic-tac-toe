@@ -58,9 +58,15 @@ body {
   color: #028d60;
 }
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
   body {
     background-color: lightblue;
+  }
+  .game {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
   .square {
     font-size: 30px;
