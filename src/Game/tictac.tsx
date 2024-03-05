@@ -39,6 +39,8 @@ function Board({
   let status;
   if (winner) {
     status = applicationTexts.winner(winner);
+  } else if (squares.every(square => square !== null)) {
+    status = "No winner";
   } else {
     status = applicationTexts.nextPlayer(xIsNext ? "X" : "O");
   }
@@ -109,6 +111,11 @@ export default function Tictac() {
       </li>
     );
   });*/
+
+  function resetGame() {
+    setHistory([Array(9).fill(null)]);
+    setCurrentMove(0);
+  }
   return (
     <ApplicationTextContext.Provider value={applicationTexts}>
       <div className="userLanguage">{userLanguage}</div>
@@ -120,6 +127,7 @@ export default function Tictac() {
             onPlay={handlePlay}
           />
         </div>
+        <button className="button" onClick={resetGame}> Try again</button>
         {/*       <div id="game-info">
           <ol>{moves}</ol>
         </div>*/}
