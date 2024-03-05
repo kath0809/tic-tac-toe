@@ -1,4 +1,4 @@
 // vite.config.js
 export default {
-    base: "/tic-tac-toe/",
+  base: "/tic-tac-toe/",
 };
