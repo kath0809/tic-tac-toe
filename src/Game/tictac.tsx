@@ -39,7 +39,7 @@ function Board({
   let status;
   if (winner) {
     status = applicationTexts.winner(winner);
-  } else if (squares.every(square => square !== null)) {
+  } else if (squares.every((square) => square !== null)) {
     status = "No winner";
   } else {
     status = applicationTexts.nextPlayer(xIsNext ? "X" : "O");
@@ -127,7 +127,10 @@ export default function Tictac() {
             onPlay={handlePlay}
           />
         </div>
-        <button className="button" onClick={resetGame}> Try again</button>
+        <button className="button" onClick={resetGame}>
+          {" "}
+          Try again
+        </button>
         {/*       <div id="game-info">
           <ol>{moves}</ol>
         </div>*/}
