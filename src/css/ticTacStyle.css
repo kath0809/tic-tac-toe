@@ -51,5 +51,7 @@ body {
     width: 30vmin;
     height: 30vmin;
     line-height: 30vmin;
+    text-align: center;
+    color: whitesmoke;
   }
 }
