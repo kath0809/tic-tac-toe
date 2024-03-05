@@ -1,6 +1,6 @@
 body {
   margin: 2rem;
-  background-color: rgb(45,45,48);
+  background-color: rgb(45, 45, 48);
   font-family: Arial, sans-serif;
 }
 
@@ -57,7 +57,6 @@ body {
 .userLanguage {
   color: #028d60;
 }
-
 
 @media (max-width: 600px) {
   .square {
